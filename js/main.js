@@ -44,3 +44,26 @@ if (hamburger && navLinks) {
     });
   });
 }
+/* ======================
+   WHATSAPP QUERY FORM
+====================== */
+
+const waForm = document.getElementById("whatsappForm");
+
+if (waForm) {
+  waForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("waName").value.trim();
+    const message = document.getElementById("waMessage").value.trim();
+
+    const phoneNumber = "919560628000"; // PG WhatsApp number
+    const text = `Hello, my name is ${name}. I have a query:\n\n${message}`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+}
