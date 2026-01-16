@@ -131,22 +131,62 @@
   }
 }
 /* ======================
-   MOBILE NAV FIX
+   DESKTOP vs MOBILE BOOK BUTTON
 ====================== */
 
-@media (max-width: 600px) {
-  .btn-primary {
-    padding: 10px 12px;
-    font-size: 0; /* hides text */
-    min-width: auto;
+/* Desktop default */
+.desktop-book {
+  display: inline-flex;
+}
+
+.btn-mobile-book {
+  display: none;
+}
+
+/* ======================
+   MOBILE NAVBAR BEHAVIOR
+====================== */
+
+@media (max-width: 768px) {
+  /* Hide desktop Book Now */
+  .desktop-book {
+    display: none;
   }
 
-  .btn-primary::after {
-    content: "📞";
-    font-size: 16px;
+  /* Show mobile icon-only button */
+  .btn-mobile-book {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background: var(--orange);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 24px rgba(5, 5, 23, 0.25);
   }
 
-  .hamburger {
-    margin-left: 10px;
+  .btn-mobile-book img,
+  .btn-mobile-book svg {
+    width: 18px;
+    height: 18px;
   }
+
+  /* Ensure spacing between hamburger & call button */
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+/* FORCE HIDE DESKTOP BOOK BUTTON ON MOBILE */
+@media (max-width: 768px) {
+  header.navbar .desktop-book {
+    display: none !important;
+  }
+}
+/* Make mobile phone icon white */
+.btn-mobile-book img,
+.btn-mobile-book svg {
+  filter: brightness(0) invert(1);
 }
