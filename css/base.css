@@ -1,0 +1,76 @@
+/* ======================
+   FONTS
+====================== */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/Inter-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/Inter-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair";
+  src: url("../assets/fonts/playfair/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair";
+  src: url("../assets/fonts/playfair/PlayfairDisplay-Italic.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+/* ======================
+   DESIGN TOKENS
+====================== */
+
+:root {
+  --navy: #050517;
+  --orange: #CF5C36;
+  --sand: #EFC88B;
+  --cream: #F4E3B2;
+  --grey: #D3D5D7;
+
+  --container: 1200px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--navy);
+  background: #fff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
