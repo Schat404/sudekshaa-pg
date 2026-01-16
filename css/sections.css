@@ -791,4 +791,41 @@
     font-size: 36px;
   }
 }
+/* ======================
+   FLOATING HELP BUTTON
+====================== */
+
+.floating-help {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--orange);
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(5, 5, 23, 0.25);
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.floating-help:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(5, 5, 23, 0.35);
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  .floating-help {
+    bottom: 18px;
+    right: 18px;
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
 
