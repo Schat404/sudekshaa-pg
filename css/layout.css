@@ -37,6 +37,13 @@
   font-weight: 700;
 }
 
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+
 .logo-text {
   font-size: 18px;
   letter-spacing: 0.5px;

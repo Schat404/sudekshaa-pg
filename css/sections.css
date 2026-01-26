@@ -207,6 +207,14 @@
     font-size: 36px;
   }
 }
+
+.services-disclaimer {
+  margin-top: 32px;
+  font-size: 14px;
+  color: rgba(5, 5, 23, 0.7);
+  font-style: italic;
+}
+
 /* ======================
    MENU SECTION
 ====================== */
